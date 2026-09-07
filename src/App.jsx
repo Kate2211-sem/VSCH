@@ -1,122 +1,74 @@
-import { useState } from 'react'
-import heroImg from './assets/hero.png'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import './App.css'
+import { useEffect } from 'react';
+import './App.css';
+
+// Импорт основных блоков
+import Header from './components/Header';
+import Hero from './components/Hero';
+import InfoCards from './components/InfoCards';
+import Services from './components/Services';
+import BannerDiscount from './components/BannerDiscount';
+import MenHall from './components/MenHall';
+import Manicure from './components/Manicure';
+import CosmeticsShop from './components/CosmeticsShop';
+import BannerSeniorDiscount from './components/BannerSeniorDiscount';
+import AboutPreview from './components/AboutPreview';
+import BeautyBlog from './components/BeautyBlog';
+import InstagramFeed from './components/InstagramFeed';
+import ContactsMap from './components/ContactsMap';
+import Footer from './components/Footer';
+
+// Импорт модальных окон
+import AccessibilityModal from './components/modals/AccessibilityModal';
+import ToastNotification from './components/modals/ToastNotification';
+import QuickViewModal from './components/modals/QuickViewModal';
+import PriceModal from './components/modals/PriceModal';
 
 function App() {
-  const [count, setCount] = useState(0)
+  useEffect(() => {
+    // Проверка роли администратора
+    const user = JSON.parse(localStorage.getItem('currentUser'));
+    if (user && user.role === 'admin') {
+      const heroButtons = document.querySelector('.hero-buttons');
+      if (heroButtons) {
+        const alreadyExists = heroButtons.querySelector('a[href="admin-orders.html"]');
+        if (!alreadyExists) {
+          const adminLink = document.createElement('a');
+          adminLink.href = 'admin-orders.html';
+          adminLink.className = 'btn-secondary';
+          adminLink.textContent = '⚙️ Управление';
+          adminLink.style.cssText = 'margin-left: 10px; background: #22c55e; color: #fff;';
+          heroButtons.appendChild(adminLink);
+        }
+      }
+    }
+  }, []);
 
   return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
+    <div className="App">
+      <Header />
+      <main className="main">
+        <Hero />
+        <InfoCards />
+        <Services />
+        <BannerDiscount />
+        <MenHall />
+        <Manicure />
+        <CosmeticsShop />
+        <BannerSeniorDiscount />
+        <AboutPreview />
+        <BeautyBlog />
+        <InstagramFeed />
+        <ContactsMap />
+      </main>
+      <Footer />
 
-      <div className="ticks"></div>
-
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
-  )
+      {/* Модальные окна и уведомления */}
+      <AccessibilityModal />
+      <ToastNotification />
+      <QuickViewModal />
+      <PriceModal />
+    </div>
+  );
 }
 
-export default App
+export default App;
