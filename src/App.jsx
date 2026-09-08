@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import './App.css';
 
-// Импорт основных блоков
+
 import Header from './components/Header';
 import Hero from './components/Hero';
 import InfoCards from './components/InfoCards';
@@ -13,11 +13,11 @@ import CosmeticsShop from './components/CosmeticsShop';
 import BannerSeniorDiscount from './components/BannerSeniorDiscount';
 import AboutPreview from './components/AboutPreview';
 import BeautyBlog from './components/BeautyBlog';
-import InstagramFeed from './components/InstagramFeed';
+import InstagramFeed from './components/Instagram';
 import ContactsMap from './components/ContactsMap';
 import Footer from './components/Footer';
 
-// Импорт модальных окон
+
 import AccessibilityModal from './components/modals/AccessibilityModal';
 import ToastNotification from './components/modals/ToastNotification';
 import QuickViewModal from './components/modals/QuickViewModal';
@@ -25,7 +25,7 @@ import PriceModal from './components/modals/PriceModal';
 
 function App() {
   useEffect(() => {
-    // Проверка роли администратора
+    
     const user = JSON.parse(localStorage.getItem('currentUser'));
     if (user && user.role === 'admin') {
       const heroButtons = document.querySelector('.hero-buttons');
@@ -57,7 +57,7 @@ function App() {
         <BannerSeniorDiscount />
         <AboutPreview />
         <BeautyBlog />
-        <InstagramFeed />
+        <Instagram />
         <ContactsMap />
       </main>
       <Footer />
