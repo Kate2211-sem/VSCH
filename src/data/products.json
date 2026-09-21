@@ -1,0 +1,162 @@
+[
+  {
+    "id": 1,
+    "title": "Маска с коллагеном MIOIT Collagen Mask",
+    "category": "masks",
+    "price": 35.00,
+    "rating": 4.8,
+    "image": "/images/ma1.jpg",
+    "description": "Интенсивно питает и восстанавливает структуру волос, придавая им гладкость и естественный блеск.",
+    "inStock": true
+  },
+  {
+    "id": 2,
+    "title": "Увлажняющая маска для лица и волос",
+    "category": "masks",
+    "price": 28.50,
+    "rating": 4.6,
+    "image": "/images/ma2.jpg",
+    "description": "Глубокое увлажнение и защита от пересушивания на каждый день.",
+    "inStock": true
+  },
+  {
+    "id": 3,
+    "title": "Коллагеновый спрей Collagen Spray",
+    "category": "sprays",
+    "price": 22.00,
+    "rating": 4.5,
+    "image": "/images/s1.jpg",
+    "description": "Несмываемый спрей-уход для облегчения расчесывания и термозащиты.",
+    "inStock": true
+  },
+  {
+    "id": 4,
+    "title": "Розовый спрей-эссенция Help My Hair",
+    "category": "sprays",
+    "price": 19.90,
+    "rating": 4.7,
+    "image": "/images/s2.jpg",
+    "description": "Легкий спрей для придавания объема и защиты от негативного воздействия окружающей среды.",
+    "inStock": true
+  },
+  {
+    "id": 5,
+    "title": "Уходовый набор The Act",
+    "category": "sprays",
+    "price": 45.00,
+    "rating": 4.9,
+    "image": "/images/s3.jpg",
+    "description": "Комплексный уход за кожей и волосами с натуральными маслами и экстрактами.",
+    "inStock": true
+  },
+  {
+    "id": 6,
+    "title": "Спрей-термозащита 15 в 1 Miracle Hair",
+    "category": "sprays",
+    "price": 24.00,
+    "rating": 4.8,
+    "image": "/images/s4.jpg",
+    "description": "Универсальное средство 15 в 1 для восстановления, защиты и разглаживания прядей.",
+    "inStock": true
+  },
+  {
+    "id": 7,
+    "title": "Парфюмированный спрей-мист",
+    "category": "sprays",
+    "price": 18.00,
+    "rating": 4.4,
+    "image": "/images/s5.jpg",
+    "description": "Освежающий мист с приятным цветочным ароматом для волос и тела.",
+    "inStock": true
+  },
+  {
+    "id": 8,
+    "title": "Спрей-эликсир Ollin Perfect Hair",
+    "category": "sprays",
+    "price": 26.50,
+    "rating": 4.9,
+    "image": "/images/s6.jpg",
+    "description": "Популярный крем-спрей 15 в 1, обеспечивающий максимальный уход и легкую укладку.",
+    "inStock": true
+  },
+  {
+    "id": 9,
+    "title": "Масло-эссенция The Act Virgin",
+    "category": "sprays",
+    "price": 32.00,
+    "rating": 4.7,
+    "image": "/images/s7.jpg",
+    "description": "Питательное масло для кончиков волос, предотвращающее сечение и ломкость.",
+    "inStock": true
+  },
+  {
+    "id": 10,
+    "title": "Розовый тоник-эссенция",
+    "category": "sprays",
+    "price": 21.00,
+    "rating": 4.3,
+    "image": "/images/s8.jpg",
+    "description": "Мягкий тоник для балансировки кожи головы и укрепления волосяных луковиц.",
+    "inStock": true
+  },
+  {
+    "id": 11,
+    "title": "Двухфазная сыворотка-спрей",
+    "category": "sprays",
+    "price": 27.00,
+    "rating": 4.6,
+    "image": "/images/s9.jpg",
+    "description": "Двухфазная формула мгновенно смягчает волосы и придает интенсивный блеск.",
+    "inStock": true
+  },
+  {
+    "id": 12,
+    "title": "Пенка для умывания и очищения",
+    "category": "sprays",
+    "price": 23.50,
+    "rating": 4.8,
+    "image": "/images/s10.jpg",
+    "description": "Нежная пенка с щеточкой для бережного глубокого очищения кожи.",
+    "inStock": true
+  },
+  {
+    "id": 13,
+    "title": "Лосьон для чувствительной кожи",
+    "category": "sprays",
+    "price": 29.00,
+    "rating": 4.5,
+    "image": "/images/s11.jpg",
+    "description": "Успокаивающий лосьон, снимающий раздражение и стимулирующий обновление.",
+    "inStock": true
+  },
+  {
+    "id": 14,
+    "title": "Шампунь Celamo восстанавливающий",
+    "category": "shampoos",
+    "price": 31.00,
+    "rating": 4.7,
+    "image": "/images/sh1.jpg",
+    "description": "Бессульфатный шампунь для бережного очищения и сохранения цвета окрашенных волос.",
+    "inStock": true
+  },
+  {
+    "id": 15,
+    "title": "Шампунь Ecolatier Urban питательный",
+    "category": "shampoos",
+    "price": 25.00,
+    "rating": 4.6,
+    "image": "/images/sh2.jpg",
+    "description": "Обогащен натуральными маслами и витаминами для укрепления сухих и ослабленных волос.",
+    "inStock": true
+  },
+  {
+    "id": 16,
+    "title": "Профессиональный шампунь Premium Care",
+    "category": "shampoos",
+    "price": 38.00,
+    "rating": 4.9,
+    "image": "/images/sh3.jpg",
+    "description": "Салонный уход в домашних условиях для глубокого очищения и укрепления корней.",
+    "inStock": true
+  }
+]
