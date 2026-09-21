@@ -46,11 +46,18 @@ const Hero = ({ onGoToShop, onResetSettings }) => {
             </div>
           </div>
         </div>
-
-        <div className="hero__visuals">
-          <img src="img/hero/hero-detail.png" alt="Детали укладки" className="hero-img hero-img--detail" />
-          <img src="img/hero/hero-main.png" alt="Главная модель" className="hero-img hero-img--main" />
-        </div>
+<div className="hero__visuals">
+  <img 
+    src="/img/hero/hero-detail.png" 
+    alt="Детали укладки" 
+    className="hero-img hero-img--detail" 
+  />
+  <img 
+    src="/img/hero/hero-main.png" 
+    alt="Главная модель" 
+    className="hero-img hero-img--main" 
+  />
+</div>
 
         <div className="floating-arrows">
           <span className="arrow arrow-left">❮</span>

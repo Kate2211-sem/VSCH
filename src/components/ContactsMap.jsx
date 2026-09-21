@@ -9,8 +9,9 @@ const ContactsMap = ({
   buttonText, 
   mapLinkText, 
   mapUrl, 
-  logoImg, 
+  
   onBook 
+  
 }) => {
   return (
     <section className="contacts">
@@ -44,18 +45,10 @@ const ContactsMap = ({
 
         <div className="contacts__map-wrapper">
           <div id="map" className="contacts__map" style={{ position: 'relative', width: '100%', height: '100%' }}>
-            <iframe
-              src={mapUrl}
-              width="100%"
-              height="100%"
-              frameBorder="0"
-              allowFullScreen={true}
-              style={{ display: 'block', border: 'none' }}
-              title="Yandex Map"
-            ></iframe>
+            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A2a8fee646bd1c6f9440f3b70db2c16fc4ebfaf5bff9ba9ec078bc1e757386d17&amp;source=constructor" width="500" height="400" frameborder="0"></iframe>
 
             <div className="map-marker">
-              <img src={logoImg} alt="OK!" />
+              
               <span>{address}</span>
             </div>
           </div>
