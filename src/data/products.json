@@ -5,7 +5,7 @@
     "category": "masks",
     "price": 35.00,
     "rating": 4.8,
-    "image": "/images/ma1.jpg",
+    "image": "/img/ma1.jpg",
     "description": "Интенсивно питает и восстанавливает структуру волос, придавая им гладкость и естественный блеск.",
     "inStock": true
   },
@@ -15,7 +15,7 @@
     "category": "masks",
     "price": 28.50,
     "rating": 4.6,
-    "image": "/images/ma2.jpg",
+    "image": "/img/ma2.jpg",
     "description": "Глубокое увлажнение и защита от пересушивания на каждый день.",
     "inStock": true
   },
@@ -35,7 +35,7 @@
     "category": "sprays",
     "price": 19.90,
     "rating": 4.7,
-    "image": "/images/s2.jpg",
+    "image": "/img/s2.jpg",
     "description": "Легкий спрей для придавания объема и защиты от негативного воздействия окружающей среды.",
     "inStock": true
   },
@@ -45,7 +45,7 @@
     "category": "sprays",
     "price": 45.00,
     "rating": 4.9,
-    "image": "/images/s3.jpg",
+    "image": "/img/s3.jpg",
     "description": "Комплексный уход за кожей и волосами с натуральными маслами и экстрактами.",
     "inStock": true
   },
@@ -55,7 +55,7 @@
     "category": "sprays",
     "price": 24.00,
     "rating": 4.8,
-    "image": "/images/s4.jpg",
+    "image": "/img/s4.jpg",
     "description": "Универсальное средство 15 в 1 для восстановления, защиты и разглаживания прядей.",
     "inStock": true
   },
@@ -65,7 +65,7 @@
     "category": "sprays",
     "price": 18.00,
     "rating": 4.4,
-    "image": "/images/s5.jpg",
+    "image": "/img/s5.jpg",
     "description": "Освежающий мист с приятным цветочным ароматом для волос и тела.",
     "inStock": true
   },
@@ -75,7 +75,7 @@
     "category": "sprays",
     "price": 26.50,
     "rating": 4.9,
-    "image": "/images/s6.jpg",
+    "image": "/img/s6.jpg",
     "description": "Популярный крем-спрей 15 в 1, обеспечивающий максимальный уход и легкую укладку.",
     "inStock": true
   },
@@ -85,7 +85,7 @@
     "category": "sprays",
     "price": 32.00,
     "rating": 4.7,
-    "image": "/images/s7.jpg",
+    "image": "/img/s7.jpg",
     "description": "Питательное масло для кончиков волос, предотвращающее сечение и ломкость.",
     "inStock": true
   },
@@ -95,7 +95,7 @@
     "category": "sprays",
     "price": 21.00,
     "rating": 4.3,
-    "image": "/images/s8.jpg",
+    "image": "/img/s8.jpg",
     "description": "Мягкий тоник для балансировки кожи головы и укрепления волосяных луковиц.",
     "inStock": true
   },
@@ -105,7 +105,7 @@
     "category": "sprays",
     "price": 27.00,
     "rating": 4.6,
-    "image": "/images/s9.jpg",
+    "image": "/img/s9.jpg",
     "description": "Двухфазная формула мгновенно смягчает волосы и придает интенсивный блеск.",
     "inStock": true
   },
@@ -115,7 +115,7 @@
     "category": "sprays",
     "price": 23.50,
     "rating": 4.8,
-    "image": "/images/s10.jpg",
+    "image": "/img/s10.jpg",
     "description": "Нежная пенка с щеточкой для бережного глубокого очищения кожи.",
     "inStock": true
   },
@@ -125,7 +125,7 @@
     "category": "sprays",
     "price": 29.00,
     "rating": 4.5,
-    "image": "/images/s11.jpg",
+    "image": "/img/s11.jpg",
     "description": "Успокаивающий лосьон, снимающий раздражение и стимулирующий обновление.",
     "inStock": true
   },
@@ -135,7 +135,7 @@
     "category": "shampoos",
     "price": 31.00,
     "rating": 4.7,
-    "image": "/images/sh1.jpg",
+    "image": "/img/sh1.jpg",
     "description": "Бессульфатный шампунь для бережного очищения и сохранения цвета окрашенных волос.",
     "inStock": true
   },
@@ -145,7 +145,7 @@
     "category": "shampoos",
     "price": 25.00,
     "rating": 4.6,
-    "image": "/images/sh2.jpg",
+    "image": "/img/sh2.jpg",
     "description": "Обогащен натуральными маслами и витаминами для укрепления сухих и ослабленных волос.",
     "inStock": true
   },
@@ -155,7 +155,7 @@
     "category": "shampoos",
     "price": 38.00,
     "rating": 4.9,
-    "image": "/images/sh3.jpg",
+    "image": "/img/sh3.jpg",
     "description": "Салонный уход в домашних условиях для глубокого очищения и укрепления корней.",
     "inStock": true
   }

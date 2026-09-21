@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Routes, Route, Link } from 'react-router-dom';
 import './App.css';
+import './shop.css';
 
 // Импорт ВСЕХ компонентов из папки components
 import Header from './components/Header';
