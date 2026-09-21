@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link, NavLink } from 'react-router-dom';
 
 const Header = ({
   lang = 'RU',
@@ -35,7 +36,14 @@ const Header = ({
                 <li><a href="#brow" className="dropdown__link">Brow-сервис</a></li>
               </ul>
             </li>
-            <li className="nav__item"><a href="#shop" className="nav__link">Магазин косметики</a></li>
+<li className="nav__item">
+  <NavLink 
+    to="/shop" 
+    className={({ isActive }) => isActive ? "nav__link active" : "nav__link"}
+  >
+    Магазин косметики
+  </NavLink>
+</li>
             <li className="nav__item"><a href="#about" className="nav__link">О нас</a></li>
             <li className="nav__item"><a href="#contacts" className="nav__link">Контакты</a></li>
           </ul>

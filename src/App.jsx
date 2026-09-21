@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Routes, Route, Link } from 'react-router-dom';
+import { Routes, Route, Link, useNavigate } from 'react-router-dom';
 import './App.css';
 import './shop.css';
 
@@ -18,6 +18,7 @@ import BeautyBlog from './components/BeautyBlog';
 import InstagramFeed from './components/InstagramFeed';
 import ContactsMap from './components/ContactsMap';
 import Footer from './components/Footer';
+import { ShopPage } from './pages/ShopPage';
 
 // Компонент страницы 404
 const NotFound = () => {
@@ -47,11 +48,11 @@ const NotFound = () => {
 
 // Главная страница со всем вашим содержимым
 const MainPage = () => {
+  const navigate = useNavigate();
+
   // Состояния
   const [lang, setLang] = useState('RU');
   const [theme, setTheme] = useState('light');
-  const [favoritesCount, setFavoritesCount] = useState(0);
-  const [cartCount, setCartCount] = useState(0);
 
   // Данные для InfoCards
   const infoCardsData = [
@@ -147,13 +148,13 @@ const MainPage = () => {
   ];
 
   // Обработчики
-  const handleToggleLang = () => setLang((prev) => (prev === 'RU' ? 'EN' : 'RU'));
-  const handleToggleTheme = () => {
-    setTheme((prev) => (prev === 'light' ? 'dark' : 'light'));
-    document.body.classList.toggle('dark-theme');
-  };
   const handleOpenBooking = () => alert('Открытие записи');
-  const handleGoToShop = () => { window.location.href = '#shop'; };
+  
+  // Мягкий переход на страницу /shop без перезагрузки
+  const handleGoToShop = () => { 
+    navigate('/shop'); 
+  };
+
   const handleResetSettings = () => {
     setLang('RU');
     setTheme('light');
@@ -162,6 +163,87 @@ const MainPage = () => {
 
   return (
     <div className={`app theme-${theme}`}>
+      <Hero
+        onGoToShop={handleGoToShop}
+        onResetSettings={handleResetSettings}
+      />
+
+      <InfoCards cards={infoCardsData} />
+
+      {/* Баннер для новых клиентов */}
+      <BannerDiscount 
+        discount="20%" 
+        onBook={handleOpenBooking} 
+        target="Новым клиентам"
+        buttonText="Записаться"
+      />
+
+      <Services
+        services={womenServices}
+        onViewPrices={() => alert('Показать цены женского зала')}
+      />
+
+      <MenHall
+        services={menServices}
+        onViewPrices={() => alert('Показать цены мужского зала')}
+      />
+
+      <Manicure
+        services={manicureServices}
+        onViewPrices={() => alert('Показать цены на маникюр')}
+      />
+
+      {/* Баннер для пенсионеров */}
+      <BannerSeniorDiscount 
+        discount="30%" 
+        onBook={handleOpenBooking} 
+        subtitle="Акция действует ежедневно!"
+        target="Дарим скидку пенсионерам"
+        buttonText="Записаться"
+      />
+
+      <AboutPreview />
+
+      <CosmeticsShop onGoToShop={handleGoToShop} />
+
+      <BeautyBlog
+        title="Блог и советы"
+        linkText="Читать все"
+        readMoreText="Читать далее"
+        posts={blogPostsData}
+      />
+
+      <InstagramFeed posts={instagramPosts} />
+
+      <ContactsMap
+        title="Контакты"
+        addressLabel="Адрес:"
+        address="Минск, Ленинградская 10"
+        phoneLabel="Телефон:"
+        phone="+375 25 655-44-33"
+        buttonText="Записаться онлайн"
+        mapLinkText="Открыть на карте"
+        mapUrl="https://yandex.by/maps/-/CDx..."
+        onBook={() => console.log('Запись')}
+      />
+    </div>
+  );
+};
+
+export function App() {
+  const [lang, setLang] = useState('RU');
+  const [favoritesCount, setFavoritesCount] = useState(0);
+  const [cartCount, setCartCount] = useState(0);
+
+  const handleToggleLang = () => setLang((prev) => (prev === 'RU' ? 'EN' : 'RU'));
+  const handleToggleTheme = () => {
+    document.body.classList.toggle('dark-theme');
+  };
+  const handleOpenBooking = () => alert('Открытие записи');
+
+  return (
+    <>
+      {/* Общая шапка сайта для всех страниц */}
       <Header
         lang={lang}
         favoritesCount={favoritesCount}
@@ -172,86 +254,21 @@ const MainPage = () => {
       />
 
       <main>
-        <Hero
-          onGoToShop={handleGoToShop}
-          onResetSettings={handleResetSettings}
-        />
+        <Routes>
+          {/* Главная страница с лендингом */}
+          <Route path="/" element={<MainPage />} />
+          
+          {/* Страница магазина */}
+          <Route path="/shop" element={<ShopPage />} />
 
-        <InfoCards cards={infoCardsData} />
-
-        {/* Баннер для новых клиентов */}
-        <BannerDiscount 
-          discount="20%" 
-          onBook={handleOpenBooking} 
-          target="Новым клиентам"
-          buttonText="Записаться"
-        />
-
-        <Services
-          services={womenServices}
-          onViewPrices={() => alert('Показать цены женского зала')}
-        />
-
-        <MenHall
-          services={menServices}
-          onViewPrices={() => alert('Показать цены мужского зала')}
-        />
-
-        <Manicure
-          services={manicureServices}
-          onViewPrices={() => alert('Показать цены на маникюр')}
-        />
-
-        {/* Баннер для пенсионеров */}
-        <BannerSeniorDiscount 
-          discount="30%" 
-          onBook={handleOpenBooking} 
-          subtitle="Акция действует ежедневно!"
-          target="Дарим скидку пенсионерам"
-          buttonText="Записаться"
-        />
-
-        <AboutPreview />
-
-        <CosmeticsShop onGoToShop={handleGoToShop} />
-
-        <BeautyBlog
-          title="Блог и советы"
-          linkText="Читать все"
-          readMoreText="Читать далее"
-          posts={blogPostsData}
-        />
-
-        <InstagramFeed posts={instagramPosts} />
-
-        <ContactsMap
-          title="Контакты"
-          addressLabel="Адрес:"
-          address="Минск, Ленинградская 10"
-          phoneLabel="Телефон:"
-          phone="+375 25 655-44-33"
-          buttonText="Записаться онлайн"
-          mapLinkText="Открыть на карте"
-          mapUrl="https://yandex.by/maps/-/CDx..."
-          onBook={() => console.log('Запись')}
-        />
+          {/* Страница 404 для несуществующих адресов */}
+          <Route path="*" element={<NotFound />} />
+        </Routes>
       </main>
 
+      {/* Общий подвал сайта */}
       <Footer />
-    </div>
-  );
-};
-
-// Главный компонент App с роутингом
-function App() {
-  return (
-    <Routes>
-      {/* Главная страница */}
-      <Route path="/" element={<MainPage />} />
-
-      {/* Страница 404 для всех неизвестных путей */}
-      <Route path="*" element={<NotFound />} />
-    </Routes>
+    </>
   );
 }
 
