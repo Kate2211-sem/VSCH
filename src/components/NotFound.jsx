@@ -1,20 +1,27 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const NotFound = () => {
   return (
-    <div style={{ textAlign: 'center', padding: '120px 20px', minHeight: '60vh' }}>
-      <h1 style={{ fontSize: '96px', color: '#fe5b14', margin: 0 }}>404</h1>
-      <h2 style={{ fontSize: '28px', marginBottom: '15px' }}>Страница не найдена</h2>
+    <div style={{ textAlign: 'center', padding: '100px 20px' }}>
+      <h1 style={{ fontSize: '72px', color: '#FE5B14', marginBottom: '10px' }}>404</h1>
+      <h2 style={{ fontSize: '24px', marginBottom: '20px' }}>Страница не найдена</h2>
       <p style={{ color: '#666', marginBottom: '30px' }}>
-        Запрашиваемая страница не существует или была перемещена.
+        Извините, запрашиваемая страница не существует или была перемещена.
       </p>
-      <a 
-        href="/" 
-        className="btn-gradient" 
-        style={{ textDecoration: 'none', display: 'inline-block', padding: '12px 30px' }}
+      <Link 
+        to="/" 
+        style={{
+          padding: '12px 24px',
+          background: '#FE5B14',
+          color: '#fff',
+          borderRadius: '8px',
+          textDecoration: 'none',
+          fontWeight: 'bold'
+        }}
       >
-        На главную
-      </a>
+        Вернуться на главную
+      </Link>
     </div>
   );
 };
